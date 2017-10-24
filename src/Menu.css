@@ -1,0 +1,12 @@
+.project-description{
+    align-content: center;
+    margin-top: 20px;
+    padding: 20px 0px 20px 10px;
+    border: 10px;
+    width: 100%;
+    background: 
+    linear-gradient(to right,
+        rgba(28, 17, 10, 0.8),
+        rgba(42, 43, 42, 0.5)
+    );
+}
