@@ -15,17 +15,32 @@
 
 .App-header {
  margin-bottom: 10px;
+ display: flex;
+ 
+ flex-direction: row;
+justify-content: space-between;
+align-items: center;
   font-family: 'Dosis', sans-serif;
   background-color: rgba(3, 71, 72, 0.96);
   height: 150px;
-  padding: 20px;
-  
+
   min-width: 100%; 
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2em;
+  padding-left: 20px;
 }
 
+.Icon-Link {
+padding: 20px;
+}
+.Icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  width: 25%;
+}
 
 
