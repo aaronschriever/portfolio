@@ -37,11 +37,12 @@ return (
             <h2><a href={project.link}>{project.title}</a></h2>
             <p>{project.caption}</p>
             <p>Technology used: {project.tech}</p>        
+        </div>
             <div className="Code-embed-container">
                 
                 <CodepenEmbed hash={project.hash} link={project.link} title={project.title} image={project.image} altText={project.altText}/>
             </div>
-        </div>
+        
     </div>
 )
     });
@@ -50,7 +51,7 @@ return (
    
     render() {
         return (
-            <div>
+            <div className="Menu-container">
             {this.state.projects}
             <GitHubProject img={require('./dartboard.png')} dartboard={dartboard}/>
             </div>

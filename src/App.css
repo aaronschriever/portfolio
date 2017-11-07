@@ -7,11 +7,7 @@
   color: white;
 }
 
-.App-logo {
-  animation: App-logo-spin 2s linear;
-  height: 80px;
-  
-}
+
 
 .App-header {
  margin-bottom: 10px;
@@ -44,3 +40,19 @@ padding: 20px;
 }
 
 
+@media(max-width: 600px) {
+  .App-header{
+  flex-direction: column;
+  padding: 50px;
+  }
+  .App-title{
+    padding: 0;
+  }
+  .Icon-Link{
+  
+  padding: 10px;  
+  }
+  .Icons {
+    justify-content: center;
+  }
+}
