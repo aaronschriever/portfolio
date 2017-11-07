@@ -43,7 +43,7 @@ padding: 20px;
 @media(max-width: 600px) {
   .App-header{
   flex-direction: column;
-  padding: 50px;
+ padding-bottom: 50px;
   }
   .App-title{
     padding: 0;
