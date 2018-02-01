@@ -15,7 +15,7 @@ class App extends Component {
           <a href="https://github.com/aaronschriever"><i className="fa fa-3x fa-github" aria-hidden="true"/></a>
         </div>
         <div className="Icon-Link">
-          <a href="https://codepen.io/Arnoo/"><i class="fa fa-3x fa-codepen" aria-hidden="true"></i></a>
+          <a href="https://codepen.io/Arnoo/"><i className="fa fa-3x fa-codepen" aria-hidden="true"></i></a>
         </div>
         </div>
           </header>

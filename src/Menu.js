@@ -7,11 +7,11 @@ import dartboardImage from './dartboard.png';
 import TransitionGroup from 'react-transition-group';
 
 const projectArray = [
-    {title: 'Random Quote Generator', link: 'https://codepen.io/Arnoo/pen/dpZvpA', caption: 'Quote generator - part of the Free Code Camp curriculum', hash:'dpZvpA', tech: 'JQuery, bootstrap' },
-    {title: 'Twitch TV Viewer', link: 'https://codepen.io/Arnoo/pen/zZvKyL', caption: 'List view of Twitch casters pulling data from the Twitch API - part of the Free Code Camp curriculum', hash: 'zZvKyL', tech: 'JQuery, JS Promises, SCSS, Pug'},
-    {title: 'Wikipedia viewer', link: 'https://codepen.io/Arnoo/pen/NAQboq', caption: 'Wikipedia search app, pulling data from the Wikipedia API - part of the Free Code Camp curriculum', hash: 'NAQboq', tech: 'JQuery, SCSS, Pug, GSAP tweenmax library' },
-    {title: 'Weather App', link: 'https://codepen.io/Arnoo/pen/ORedGg', caption: 'Weather app, pulling data from Openweather API - part of the Free Code Camp curriculum', hash: 'ORedGg', tech: 'JQuery, bootstrap' },
-    {title: 'Calculator', link: 'https://codepen.io/Arnoo/pen/ZJGZBr', caption: 'JS Calculator using React - part of the Free Code Camp curriculum', hash: 'ZJGZBr', tech: 'JS, React, SCSS'},
+    {title: 'Random Quote Generator', link: 'https://codepen.io/Arnoo/pen/dpZvpA', caption: 'Quote generator - part of the Free Code Camp curriculum', hash:'dpZvpA', tech: 'JQuery, bootstrap' , geoLocation: ''},
+    {title: 'Twitch TV Viewer', link: 'https://codepen.io/Arnoo/pen/zZvKyL', caption: 'List view of Twitch casters pulling data from the Twitch API - part of the Free Code Camp curriculum', hash: 'zZvKyL', tech: 'JQuery, JS Promises, SCSS, Pug', geoLocation: ''},
+    {title: 'Wikipedia viewer', link: 'https://codepen.io/Arnoo/pen/NAQboq', caption: 'Wikipedia search app, pulling data from the Wikipedia API - part of the Free Code Camp curriculum', hash: 'NAQboq', tech: 'JQuery, SCSS, Pug, GSAP tweenmax library', geoLocation:'' },
+    {title: 'Weather App', link: 'https://codepen.io/Arnoo/pen/ORedGg', caption: 'Weather app, pulling data from Openweather API - part of the Free Code Camp curriculum', hash: 'ORedGg', tech: 'JQuery, bootstrap' , geoLocation: 'geolocation'},
+    {title: 'Calculator', link: 'https://codepen.io/Arnoo/pen/ZJGZBr', caption: 'JS Calculator using React - part of the Free Code Camp curriculum', hash: 'ZJGZBr', tech: 'JS, React, SCSS', geoLocation: ''},
 ]  
 const dartboard = {title: 'Dartboard App', link: 'https://aaronschriever.github.io/dartboard/', caption: 'Dartboard app created for scoring while playing a game of darts', image:{dartboardImage}, altText: 'Dartboard app screen shot' , tech:'JS, JCanvas'};
 
@@ -32,7 +32,7 @@ const dartboard = {title: 'Dartboard App', link: 'https://aaronschriever.github.
     componentDidMount (){
         let projects = projectArray.map((project) =>{
 return (
-    <div className="Project-container">
+    <div className="Project-container" key={project.hash}>
         <div className="Project-description"key={project.id}>
             <h2><a href={project.link}>{project.title}</a></h2>
             <p>{project.caption}</p>
@@ -40,7 +40,7 @@ return (
         </div>
             <div className="Code-embed-container">
                 
-                <CodepenEmbed hash={project.hash} link={project.link} title={project.title} image={project.image} altText={project.altText}/>
+                <CodepenEmbed geoLocation={project.geoLocation} hash={project.hash} link={project.link} title={project.title} image={project.image} altText={project.altText}/>
             </div>
         
     </div>
